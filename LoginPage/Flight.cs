@@ -16,5 +16,29 @@ namespace LoginPage
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string username = txtuser.Text;
+            string password = txtpass.Text;
+
+            if(username == "Raymond" && password == "123")
+            {
+                MessageBox.Show("Login successful!");
+                TravelRegister travelRegister = new TravelRegister();
+                travelRegister.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("Invalid password or user please try again");
+            }
+        }
     }
 }

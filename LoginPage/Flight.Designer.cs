@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             txtuser = new TextBox();
-            textBox2 = new TextBox();
+            txtpass = new TextBox();
             button1 = new Button();
             button2 = new Button();
             label1 = new Label();
@@ -44,13 +44,13 @@
             txtuser.Size = new Size(436, 31);
             txtuser.TabIndex = 0;
             // 
-            // textBox2
+            // txtpass
             // 
-            textBox2.Location = new Point(173, 495);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '$';
-            textBox2.Size = new Size(436, 31);
-            textBox2.TabIndex = 1;
+            txtpass.Location = new Point(173, 495);
+            txtpass.Name = "txtpass";
+            txtpass.PasswordChar = '$';
+            txtpass.Size = new Size(436, 31);
+            txtpass.TabIndex = 1;
             // 
             // button1
             // 
@@ -58,8 +58,9 @@
             button1.Name = "button1";
             button1.Size = new Size(207, 55);
             button1.TabIndex = 2;
-            button1.Text = "button1";
+            button1.Text = "Login";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -69,6 +70,7 @@
             button2.TabIndex = 3;
             button2.Text = "back";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label1
             // 
@@ -108,10 +110,11 @@
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox2);
+            Controls.Add(txtpass);
             Controls.Add(txtuser);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Flight";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Flight";
             ResumeLayout(false);
             PerformLayout();
@@ -120,7 +123,7 @@
         #endregion
 
         private TextBox txtuser;
-        private TextBox textBox2;
+        private TextBox txtpass;
         private Button button1;
         private Button button2;
         private Label label1;
